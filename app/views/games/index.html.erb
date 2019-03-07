@@ -1,0 +1,19 @@
+<h2 class="center">Games</h2>
+<hr />
+<div class="row">
+   <div class="col s12 m6">
+    <button class="btn" id="toggle">Show Form</button>
+       <ul id="games-list">
+           <% @games.each do |game| %>
+               <li class="game-item" data-id=<%= game.id %> data-name="<%= game.name%>">
+                   <%= game.name %> - <%= game.description %>
+               </li>
+           <% end %>
+       </ul>
+   </div>
+   <div class="col s12 m6" id="character-list">
+       <h3 id="game">Characters In Game</h3>
+       <ul id="characters">
+       </ul>
+   </div>
+</div>
